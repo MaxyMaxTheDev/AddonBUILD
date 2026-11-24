@@ -1,5 +1,10 @@
-import ModMaker from "@/components/ModMaker";
+import AppShell from "@/components/AppShell";
+import { AppProvider } from "@/components/AppProvider";
 
 export default function Home() {
-  return <ModMaker />;
+  return (
+    <AppProvider>
+      <AppShell />
+    </AppProvider>
+  );
 }

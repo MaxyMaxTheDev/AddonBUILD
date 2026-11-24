@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AddonBUILD — Minecraft Add-On Maker",
   description:
-    "Create Minecraft Bedrock resource packs and behavior packs right in your browser. Edit every texture, write JSON, and export .zip add-ons.",
+    "AddonBUILD 2.0 — create Minecraft Bedrock resource packs and behavior packs in your browser. Edit real vanilla textures, build behaviors with forms, and export .zip or .mcpack add-ons.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

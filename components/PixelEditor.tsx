@@ -84,9 +84,16 @@ interface Props {
   name: string;
   data: TextureData;
   onChange: (next: TextureData) => void;
+  defaultShowGrid?: boolean;
 }
 
-export default function PixelEditor({ textureKey, name, data, onChange }: Props) {
+export default function PixelEditor({
+  textureKey,
+  name,
+  data,
+  onChange,
+  defaultShowGrid = true,
+}: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const dataRef = useRef(data);
   const onChangeRef = useRef(onChange);
@@ -103,7 +110,7 @@ export default function PixelEditor({ textureKey, name, data, onChange }: Props)
   const [color, setColor] = useState("#e8c33e");
   const [brushSize, setBrushSize] = useState(1);
   const [zoom, setZoom] = useState(16);
-  const [showGrid, setShowGrid] = useState(true);
+  const [showGrid, setShowGrid] = useState(defaultShowGrid);
   const [hover, setHover] = useState<Point | null>(null);
   const [previewEnd, setPreviewEnd] = useState<Point | null>(null);
   const [showResize, setShowResize] = useState(false);
@@ -131,6 +138,8 @@ export default function PixelEditor({ textureKey, name, data, onChange }: Props)
     setResizeH(data.height);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textureKey]);
+
+  useEffect(() => setShowGrid(defaultShowGrid), [defaultShowGrid, textureKey]);
 
   const update = useCallback((next: TextureData, recordHistory = true) => {
     if (recordHistory) {
