@@ -13,9 +13,9 @@ export default function Home({ onSelect }: { onSelect: (screen: Screen) => void 
       <div className="home-grid-bg" />
       <header className="home-header">
         <div className="brand">
-          <div className="brand-cube" aria-hidden="true"><span>B</span></div>
+          <div className="brand-cube" aria-hidden="true"><span>A</span></div>
           <div>
-            <div className="brand-name">BLOCKFORGE</div>
+            <div className="brand-name">ADDONBUILD</div>
             <div className="brand-tag">MINECRAFT ADD-ON MAKER</div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function Home({ onSelect }: { onSelect: (screen: Screen) => void 
       </main>
 
       <footer className="home-footer">
-        <span>BlockForge — a fan-made tool, not affiliated with Mojang or Microsoft.</span>
+        <span>AddonBUILD — a fan-made tool, not affiliated with Mojang or Microsoft.</span>
         <span>Minecraft is a trademark of Mojang AB.</span>
       </footer>
     </div>

@@ -1,4 +1,4 @@
-# BlockForge — Minecraft Add-On Maker
+# AddonBUILD — Minecraft Add-On Maker
 
 A browser-based Minecraft **Bedrock Edition** add-on maker built with Next.js 16, React 19 and TypeScript.
 
@@ -48,4 +48,4 @@ lib/
 
 ## Credits
 
-Textures are loaded from Mojang's official [bedrock-samples](https://github.com/Mojang/bedrock-samples) repository and are subject to the [Minecraft EULA](https://www.minecraft.net/en-us/eula). BlockForge is a fan-made tool, not affiliated with Mojang or Microsoft.
+Textures are loaded from Mojang's official [bedrock-samples](https://github.com/Mojang/bedrock-samples) repository and are subject to the [Minecraft EULA](https://www.minecraft.net/en-us/eula). AddonBUILD is a fan-made tool, not affiliated with Mojang or Microsoft.

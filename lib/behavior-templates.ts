@@ -16,7 +16,7 @@ export const BEHAVIOR_TEMPLATES: BehaviorTemplate[] = [
   "format_version": "1.20.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "blockforge:example_creature",
+      "identifier": "addonbuild:example_creature",
       "is_summonable": true,
       "is_spawnable": true,
       "is_experimental": false
@@ -42,7 +42,7 @@ export const BEHAVIOR_TEMPLATES: BehaviorTemplate[] = [
   "format_version": "1.20.0",
   "minecraft:item": {
     "description": {
-      "identifier": "blockforge:example_item",
+      "identifier": "addonbuild:example_item",
       "category": "Equipment"
     },
     "components": {
@@ -82,7 +82,7 @@ export const BEHAVIOR_TEMPLATES: BehaviorTemplate[] = [
     content: `{
   "format_version": "1.20.0",
   "minecraft:recipe_shaped": {
-    "description": { "identifier": "blockforge:example_recipe" },
+    "description": { "identifier": "addonbuild:example_recipe" },
     "tags": ["crafting_table"],
     "pattern": ["###", "#D#", "###"],
     "key": {
@@ -99,10 +99,10 @@ export const BEHAVIOR_TEMPLATES: BehaviorTemplate[] = [
     label: "Function (.mcfunction)",
     description: "A list of commands run with /function.",
     path: "functions/example.mcfunction",
-    content: `# BlockForge example function
-# Run in game with: /function blockforge/example
+    content: `# AddonBUILD example function
+# Run in game with: /function addonbuild/example
 
-say Hello from BlockForge!
+say Hello from AddonBUILD!
 give @p minecraft:diamond 1
 tellraw @a {"rawtext":[{"text":"§aCustom function executed!"}]}
 `,
@@ -115,7 +115,7 @@ tellraw @a {"rawtext":[{"text":"§aCustom function executed!"}]}
     content: `{
   "format_version": "1.8.0",
   "animations": {
-    "animation.blockforge.example.bob": {
+    "animation.addonbuild.example.bob": {
       "loop": true,
       "animation_length": 1.0,
       "bones": {
@@ -140,10 +140,10 @@ export const DEFAULT_BEHAVIOR_FILES = [
   ),
   {
     path: "README.txt",
-    content: `BLOCKFORGE BEHAVIOR PACK
+    content: `ADDONBUILD BEHAVIOR PACK
 =========================
 
-This pack was generated in BlockForge.
+This pack was generated in AddonBUILD.
 
 INSTALL
 -------
@@ -156,7 +156,7 @@ INSTALL
 TIP
 ---
 Custom items also need a Resource Pack containing textures/item_texture.json and the
-item icon PNG. Use the Resource Pack Studio in BlockForge to create those files.
+item icon PNG. Use the Resource Pack Studio in AddonBUILD to create those files.
 `,
   },
 ];

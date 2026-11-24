@@ -51,7 +51,7 @@ export default function BehaviorStudio({ onBack }: { onBack: () => void }) {
   const [activePath, setActivePath] = useState("entities/example_creature.json");
   const [meta, setMeta] = useState<PackMeta>(() => ({
     name: "My Behavior Pack",
-    description: "Created with BlockForge",
+    description: "Created with AddonBUILD",
     version: "1.0.0",
     minEngineVersion: "1.20.0",
     uuid: makeUuid(),

@@ -38,7 +38,7 @@ export default function BehaviorBuilder({
   const [idEdited, setIdEdited] = useState(false);
 
   const [name, setName] = useState("Crystal Buddy");
-  const [identifier, setIdentifier] = useState("blockforge:crystal_buddy");
+  const [identifier, setIdentifier] = useState("addonbuild:crystal_buddy");
   const [health, setHealth] = useState(20);
   const [speed, setSpeed] = useState(0.2);
   const [behavior, setBehavior] = useState("wander");
@@ -58,11 +58,11 @@ export default function BehaviorBuilder({
 
   const changeName = (value: string) => {
     setName(value);
-    if (!idEdited) setIdentifier(`blockforge:${slug(value)}`);
+    if (!idEdited) setIdentifier(`addonbuild:${slug(value)}`);
   };
 
   const generated = useMemo<GeneratedFile>(() => {
-    const id = identifier.trim() || `blockforge:${slug(name)}`;
+    const id = identifier.trim() || `addonbuild:${slug(name)}`;
     const short = slug(id.includes(":") ? id.split(":")[1] : id);
 
     if (kind === "entity") {
@@ -199,7 +199,7 @@ export default function BehaviorBuilder({
               <input
                 value={identifier}
                 onChange={(e) => { setIdEdited(true); setIdentifier(e.target.value); }}
-                placeholder="blockforge:crystal_buddy"
+                placeholder="addonbuild:crystal_buddy"
               />
             </label>
             <div className="form-row">
@@ -238,7 +238,7 @@ export default function BehaviorBuilder({
               <input
                 value={identifier}
                 onChange={(e) => { setIdEdited(true); setIdentifier(e.target.value); }}
-                placeholder="blockforge:power_gem"
+                placeholder="addonbuild:power_gem"
               />
             </label>
             <div className="form-row">
@@ -283,7 +283,7 @@ export default function BehaviorBuilder({
               <input
                 value={identifier}
                 onChange={(e) => { setIdEdited(true); setIdentifier(e.target.value); }}
-                placeholder="blockforge:gem_beacon"
+                placeholder="addonbuild:gem_beacon"
               />
             </label>
             <label className="form-field">

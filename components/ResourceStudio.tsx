@@ -75,7 +75,7 @@ export default function ResourceStudio({ onBack }: { onBack: () => void }) {
 
   const [meta, setMeta] = useState<PackMeta>(() => ({
     name: "My Resource Pack",
-    description: "Created with BlockForge",
+    description: "Created with AddonBUILD",
     version: "1.0.0",
     minEngineVersion: "1.20.0",
     uuid: makeUuid(),
